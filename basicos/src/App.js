@@ -2,6 +2,7 @@ import React,{Fragment, useState} from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Producto from './components/Producto';
+import Carrito from './components/Carrito';
 
 function App() {
 
@@ -31,7 +32,7 @@ function App() {
       
       {productos.map(producto =>(
         <Producto
-          //props state
+          //props 
           key={producto.id}
           producto1={producto}
           carrito={carrito}
@@ -41,6 +42,10 @@ function App() {
 
         />
       ))}
+
+      <Carrito
+        carrito={carrito}
+      />
 
       <Footer
         fecha1={fecha}
