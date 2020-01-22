@@ -7,6 +7,7 @@ import Carrito from './components/Carrito';
 function App() {
 
   //listado de productos
+  //State: productos función:guardarProductos
   const [productos, guardarProductos] = useState([
     {id:1, nombre:'react', precio:23},
     {id:2, nombre:'vuejs', precio:54},
@@ -45,6 +46,7 @@ function App() {
 
       <Carrito
         carrito={carrito}
+        agregarProducto={agregarProducto}
       />
 
       <Footer
